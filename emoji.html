@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+   .face{
+       padding-left: 400px;
+       padding-top: 100px;
+   }
+   .body{
+       padding-left: 400px;
+   }
+   .leg{
+       padding-left: 402px;
+   }
+</style>
+
+<body>   
+   <div class="face" >
+       <img src="emoji/face3.jpg" height="60px" width="60px" id="f" onclick="h1();">
+   </div>
+   <div class="body">
+       <img src="emoji/body.jpg" height="60px" width="60px" id="b" onclick="h2();">
+   </div>
+   <div class="leg">
+    <img src="emoji/leg.jpeg" height="60px" width="54px" id="l" onclick="h3();">
+</div>
+    
+       <script>
+           var click=0;
+           var click1=0;
+           var click2=0;
+          const h1=()=>{
+            if(click==0)
+            {
+                document.images["f"].src="emoji/face.jpg"
+                click++;
+            }
+            else if(click==1)
+            {
+                document.images["f"].src="emoji/face2.jpg"
+                click++;
+            }
+            else if(click==2)
+            {
+                
+                document.images["f"].src="emoji/WhatsApp Image 2021-05-20 at 9.17.44 AM.jpg"
+                click++;
+            }
+            else if(click==3)
+            {
+                document.images["f"].src="emoji/face3.jpg"
+                click=0;
+            }
+           
+            
+           
+          }
+          const h2=()=>{
+            if(click1==0)
+            {
+                document.images["b"].src="emoji/body2.jpg"
+                click1++;
+            }
+            else if(click1==1)
+            {
+                document.images["b"].src="emoji/body1.jpg"
+                click1++;
+            }
+            else if(click1==2)
+            {
+                
+                document.images["b"].src="emoji/body3.jpg"
+                click1++;
+            }
+            else if(click1==3)
+            {
+                document.images["b"].src="emoji/body.jpg"
+                click1=0;
+            }
+           
+            
+           
+          }
+          const h3=()=>{
+            if(click2==0)
+            {
+                document.images["l"].src="emoji/leg3.jpeg"
+                click2++;
+            }
+            else if(click2==1)
+            {
+                document.images["l"].src="emoji/leg2.jpeg"
+                click2++;
+            }
+            else if(click2==2)
+            {
+                
+                document.images["l"].src="emoji/leg1.jpeg"
+                click2++;
+            }
+            else if(click2==3)
+            {
+                document.images["l"].src="emoji/leg.jpeg"
+                click2=0;
+            }
+           
+            
+           
+          }
+           
+   
+</script>
+    
+
+</body>
+</html>

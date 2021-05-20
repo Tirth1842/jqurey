@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .demo{
+
+        font-size: xx-large;
+        color: lightseagreen;
+        text-align: center;
+        padding-top: 200px;
+    }
+    table,td{
+        padding: 20px;
+        width: 900px;
+        font-size: 16px;
+        font-weight: bolder;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-variant: inherit;
+        font-style: italic;
+        color: lightblue;
+    }
+    td:hover{
+        background-color: lightcoral;
+    }
+    .container{
+        text-align: center;
+        -moz-text-size-adjust: auto;
+    }
+    .h4{
+        
+        text-align: left;
+        font-style: normal;
+    }
+    .p1{
+        font-size: 12px;
+        font-weight: normal;
+    }
+    input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+.feedback{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.h41{
+    font-size: x-large;
+}
+.h42{
+    font-size: x-large;
+}
+.txt3{
+    padding-left: 20px;
+}
+
+</style>
+
+<body>
+    <div class="container">
+        <table cellspacing="50px">
+            <tr>
+                <td id="home">
+                    HOME
+                </td>
+                <td id="aboutus">
+                    ABOUT US
+                </td>
+                <td id="feedback">
+                    FEEDBACK
+                </td>
+                <td id="contactus">
+                    CONTACT US
+                </td>
+                
+            </tr>
+        </table>
+    </div>
+    <div class="demo" id="txt">
+        DEMO OF TOGGLE, HIDE & SHOW
+    </div>
+
+    <div class="aboutus" id="txt1">
+        <h4 class="h4">ABOUT US</h4>
+        <p class="p1">
+            Samarth Diamond is a leading manufacturer in small size round brilliant cut diamonds. Each diamond at Samarth is a story waiting to be shared, be it in the form of jewellery, watches or art pieces. Capable, powerful and efficient are the meanings of the word Samarth in the ancient Indian language of Sankrit. With precision and expertise we bring justice to our name and create a sparkle of joy.
+        </p>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="feedback" id="txt2">
+        <h4>FEEDBACK</h4>
+        <form action="/action_page.php">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name.."><br>
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br>
+      
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+        
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+
+      <br>
+      <br>
+      <br>
+      <div id="txt3" class="txt3">
+        <h4 class="h41">CONTACT US</h4>
+      <br>
+      <br>
+      <br>
+      <div class="row" >
+        
+        
+        <div class="col-sm-6">
+            <h4>Office-India, Mumbai</h4>
+            <br>
+            <p>No. EC-7092, Bharat Diamond Bourse, “G” Block, Bandra Kurla Complex, Bandra (East), Mumbai – 400051.</p>
+            <br>
+            QBC No.: 22 3392 6717 / 7417
+            <br>
+            Tele-Fax: + 91 22 23641590
+            <br>
+            E-mail: info@samarthdiamond.com
+            <br>
+            Website: www.samarthdiamond.com
+        </div>
+        <div class="col-sm-6">
+          <h4>
+            Factory-India, Visnagar(Gujarat)
+          </h4>
+          <p>
+            Rushikesh Market, Opp. Nootan High School, Visnagar. – 384315. Dist.: Mehsana Gujarat, India.
+          </p>
+          <p>
+            Tel: +91 7436078401 / 7436078402 / 7436078403
+            E-mail: factory@samarthdiamond.com
+          </p>
+        </div>
+      </div>
+      </div>
+      
+      <br>
+      <br>
+      <br>
+      <br>
+     
+        
+        <script>
+                    $(document).ready(function(){
+                        $("#txt1").hide();
+                        $("#txt2").hide();
+                        $("#txt3").hide();
+
+                        $("#home").click(function(){
+                            $("#txt1").hide(100);
+                            $("#txt2").hide(100);
+                            $("#txt3").hide(100);
+                            $("#txt").show(100);
+
+
+                        });
+                        $("#aboutus").click(function(){
+                            $("#txt1").show(100);
+                            $("#txt2").hide(100);
+                            $("#txt3").hide(100);
+                            $("#txt").hide(100);
+
+                        });
+                        $("#feedback").click(function(){
+                            $("#txt1").hide(100);
+                            $("#txt2").show(100);
+                            $("#txt3").hide(100);
+                            $("#txt").hide(100);
+
+                        });
+                        $("#contactus").click(function(){
+                            $("#txt1").hide(100);
+                            $("#txt2").hide(100);
+                            $("#txt3").show(100);
+                            $("#txt").hide(100);
+
+                        });
+                    });
+                </script>
+
+ </body>
+ 
+</html>

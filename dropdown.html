@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .xyz
+    {
+        color:red;
+        font-size: 30px;
+        width:500px;
+    }
+</style>
+
+<body>   
+    
+        <div>
+            <select name="country" id="country">
+                <option value="select country">select country</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+               
+              </select>
+        </div>
+        <br>
+        <br>
+        <br>
+        
+         <div>
+            <select name="state" id="state">
+                <option value="select state" selected="selected">select state</option>
+                
+              </select>
+         </div>
+          <br>
+          <br>
+          <br>
+         <div>
+            <select name="city" id="city">
+                <option value="select city" selected="selected">select city</option>
+                
+              </select>
+         </div>
+         
+
+        <script>
+            $(document).ready(function(){
+
+                var state1=["GUJARAT","MAHARASHTRA","RAJASTHAN"];
+                var state2=["CALIFORNIA","FLORIDA","TEXAS"];
+                var state3=["ONTARIO","ALBERTA","QUEBEC"];
+                var cityG=["VISNAGAR","GANDHINAGAR","AHEMDABAD"];
+                var cityR=["JAIPUR","UDAIPUR","AJMER"];
+                var cityM=["MUMBAI","PUNE","LONAVAL"];
+                var cityC=["LOS ANGELES","SAN DIEGO","SAN JOSE"];
+                var cityF=["MIAMI","ORLANDO","TAMPA"];
+                var cityT=["DALAS","AUSTIN","SAN ANTONIO"];
+                var cityO=["TORONTO","OTTAWA","BRAMPTON"];
+                var cityA=["CALGARY","EDMONTON","RED DEER"];
+                var cityQ=["MONTREAL","GATINEAu","SHERBROOKE"]
+               $("#country").change(function(){
+                  let a=$("#country").val();
+                  if(a=="India")
+                  {
+                    $('#state').empty().append(new Option("Select State","Select State"));
+                   for(var x in state1)
+                   {
+                       $('#state').append(new Option(state1[x],state1[x]));
+                   }
+                 }
+                 else if(a=="USA")
+                  {
+                    $('#state').empty().append(new Option("Select State","Select State"));
+                   for(var x in state2)
+                   {
+                       $('#state').append(new Option(state2[x],state2[x]));
+                   }
+                 }
+                 else if(a=="Canada")
+                  {$('#state').empty().append(new Option("Select State","Select State"));
+                   for(var x in state3)
+                   {
+                       $('#state').append(new Option(state3[x],state3[x]));
+                   }
+                 }
+                   
+                   
+               })
+               $("#state").change(function(){
+                let a=$("#state").val();
+                  if(a=="GUJARAT")
+                  {
+                    $('#city').empty().append(new Option("Select city","Select city"));
+                   for(var x in cityG)
+                   {
+                       $('#city').append(new Option(cityG[x],cityG[x]));
+                   }
+                }
+                 else if(a=="MAHARASHTRA")
+                  {
+                    $('#city').empty().append(new Option("Select city","Select city"));
+                   for(var x in cityM)
+                   {
+                       $('#city').append(new Option(cityM[x],cityM[x]));
+                   }
+                 }
+                 else if(a=="RAJASTHAN")
+                  {
+                    $('#city').empty().append(new Option("Select city","Select city"));
+                   for(var x in cityR)
+                   {
+                       $('#city').append(new Option(cityR[x],cityR[x]));
+                   }
+                 }
+                 else if(a=="CALIFORNIA")
+                 {
+                    $('#city').empty().append(new Option("Select city","Select city"));
+                   for(var x in cityC)
+                   {
+                       $('#city').append(new Option(cityC[x],cityC[x]));
+                   }
+                 }
+                 else if(a=="FLORIDA")
+                 {
+                    $('#city').empty().append(new Option("Select city","Select city"));
+                   for(var x in cityF)
+                   {
+                       $('#city').append(new Option(cityF[x],cityF[x]));
+                   }
+                 }
+                 else if(a=="TEXAS")
+                 {
+                    $('#city').empty().append(new Option("Select city","Select city"));
+                   for(var x in cityT)
+                   {
+                       $('#city').append(new Option(cityT[x],cityT[x]));
+                   }
+                 }
+                 else if(a=="ONTARIO")
+                 {
+
+                    $('#city').empty().append(new Option("Select city","Select city"));
+                   for(var x in cityO)
+                   {
+                       $('#city').append(new Option(cityO[x],cityO[x]));
+                   }
+                 }
+                 else if(a=="ALBERTA")
+                 {
+                    $('#city').empty().append(new Option("Select city","Select city"));
+                   for(var x in cityA)
+                   {
+                       $('#city').append(new Option(cityA[x],cityA[x]));
+                   }
+                 }
+                 else if(a=="QUEBEC")
+                 {
+                    $('#city').empty().append(new Option("Select city","Select city"));
+                   for(var x in cityQ)
+                   {
+                       $('#city').append(new Option(cityQ[x],cityQ[x]));
+                   }
+                 }
+               });
+            });
+        </script>
+</body>
+</html>

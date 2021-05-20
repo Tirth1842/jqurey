@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .xyz
+    {
+        color:red;
+        font-size: 30px;
+        width:500px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <img src="image/1200px-Administrative_map_of_Gujarat.png" height="200px" width="200px" id="image1">
+         <img src="image/maharashtra-district-map.jpg" height="200px" width="200px" id="image2"> 
+         
+        <!-- <input type="button" class="btn btn-default" id="btnAdd" value="AddNewItem"> -->
+        </div>
+        <div class="container" id="txt">
+            <h1>Maharashtra</h1>
+            <p>Maharashtra (/mɑːhəˈrɑːʃtrə/; Marathi: [məharaːʂʈɽə] (About this soundlisten), abbr. MH) is a state in the western peninsular region of India occupying a substantial portion of the Deccan Plateau. Maharashtra is the second-most populous state in India as well as the second-most populous country subdivision in the world. It was formed on 1 May 1960 by splitting the bilingual Bombay State, which had existed since 1956, into majority Marathi-speaking Maharashtra and Gujarati-speaking Gujarat. The state capital is Mumbai, the most populous urban area in India. The Godavari and the Krishna are the two major rivers in the state. Marathi is the most widely spoken language and is also the official language of the state.</p>
+        </div>
+        <div class="container" id="txt1">
+            <h1>Gujarat</h1>
+            <p>Gujarat (/ˌɡʊdʒəˈrɑːt/, Gujarati: [ˈɡudʒəɾɑt] (About this soundlisten)) is a state on the western coast of India with a coastline of 1,600 km (990 mi) – most of which lies on the Kathiawar peninsula – and a population of 60.4 million. It is the fifth-largest Indian state by area and the ninth-largest state by population. Gujarat is bordered by Rajasthan to the northeast, Dadra and Nagar Haveli and Daman and Diu to the south, Maharashtra to the southeast, Madhya Pradesh to the east, and the Arabian Sea and the Pakistani province of Sindh to the west. Its capital city is Gandhinagar, while its largest city is Ahmedabad.[9] The Gujarati people of India are indigenous to the state, and their language Gujarati, is the state's official language. The economy of Gujarat is the fifth-largest in India, with a gross state domestic product (GSDP) of ₹15.03 trillion (US$210 billion) and has the country's 11th-highest GSDP per capita of ₹196,000 (US$2,700).[1] Gujarat ranks 21st among Indian states in human development index.[4] The state traditionally has low unemployment and is widely considered one of the most industrially developed states of India and a manufacturing hub</p>
+        </div>
+        
+        <script>
+                    $(document).ready(function(){
+                        $("#txt").hide(1000);
+                        $("#txt1").hide(1000);
+                        $("#image1").click(function(){
+                           
+                            $("#txt1").toggle(1000);
+                            //$("#txt").hide(1000);
+                            $("#image2").toggle(1000);
+                        });
+                        $("#image2").click(function(){
+                            $("#txt").toggle(1000);
+                            //$("#txt").hide(1000);
+                            $("#image1").toggle(1000);
+                        });
+                    });
+                </script>
+
+ </body>
+ 
+</html>

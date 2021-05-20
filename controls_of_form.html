@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .xyz
+    {
+        color:red;
+        font-size: 30px;
+        width:500px;
+    }
+</style>
+
+<body>   
+    
+    <div class="container">
+        <form name="frm1" class="form-horizontal" method="post">
+        <div class="form-group">
+        <label for="email">Email address:</label>
+        <input type="email" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd">
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select class="form-control" id="Gender">
+            <option>Select</option>
+            <option>Male</option>
+            <option>Female</option>
+            </select>
+            </div>
+            <div class="form-group">
+                <label for="Occupation">Occupation:</label>
+                <label class="radioinline"><input type="radio" name="occupation" id="occupation" value="Business"> Business</label>
+                <label class="radioinline"><input type="radio" name="occupation" id="occupation" value="Job"> Job</label>
+                <label class="radioinline"><input type="radio" name="occupation" id="occupation" value="Student"> Student</label>
+                <label class="radioinline"><input type="radio" name="occupation" id="occupation" value="Other"> Other</label>
+                </div>
+                <div class="form-group">
+                    <label for="Hobbies">Hobbies:</label>
+                    <label class="checkboxinline"><input type="checkbox" name="hobbies" value="Singing"> Singing</label>
+                    <label class="checkboxinline"><input type="checkbox" name="hobbies" value="Dancing"> Dancing </label>
+                    <label class="checkboxinline"><input type="checkbox" name="hobbies" value="Skatting"> Skatting</label>
+                    <label class="checkboxinline"><input type="checkbox" name="hobbies" value="Chatting"> Chatting</label>
+                    </div>
+                    <input type="button" class="btn btn-default" id="btnAns" value="click me">
+<div id="Selecteddisplay">
+    hii
+</div>
+</form>
+        <script>
+            $(document).ready(function(){
+               $("#btnAns").click(function(){
+                  //alert("hii");
+                   let str="";
+                   let email = $("#email").val();
+                   let pwd = $("#pwd").val();
+                   let gender = $("#Gender").val();
+                   //alert(gender);
+                   let occupation = $("#occupation").val();
+
+                   str += "Email = "+email+"<br>";
+                   str += "PWd =" + pwd +"<br>";
+                   str += "Gender =" + gender +"<br>";
+                   str += "Occupation =" + occupation +"<br>";
+                  
+                   strhobbies="";
+                   $('input:checkbox[name=hobbies]').each(function(){
+                       if($(this).is(':checked'))
+                       {
+                           strhobbies+=($(this).val())+" ";
+                           //alert(strhobbies);
+                       }
+                   });
+
+                   str+="Hobbies = "+ strhobbies;
+
+                   $("#Selecteddisplay").html(str);
+               });
+            });
+        </script>
+</body>
+</html>
